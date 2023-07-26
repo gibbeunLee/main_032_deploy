@@ -22,7 +22,7 @@ function PostsCard({ post }: { post: PostCommunityInterface }) {
   const date = format(new Date(post.createdAt), 'yyyy.MM.dd');
 
   return (
-    <PostsCardContainer to={`/community/${post.communityId}`}>
+    <PostsCardContainer to={`/community/detail/${post.communityId}`}>
       <TopContainer>
         <Nickname>{post.userInfo.nickName}</Nickname>
         <CategoryBox>

@@ -30,9 +30,9 @@ function MyPage() {
     ['patchMyInfo', editData],
     () => patchUserInfo(parsed.userId || 1, editData),
     {
-      onSuccess: (d: { user: MyInfoInterface }) => {
+      onSuccess: (d: { data: { user: MyInfoInterface } }) => {
         alert('저장되었습니다.');
-        setEditData(d.user);
+        setEditData(d.data.user);
         setIsEditing(false);
       },
     },
@@ -56,25 +56,25 @@ function MyPage() {
 
   useEffect(() => {
     if (data) {
-      setEditData(data.user);
+      setEditData(data.data.user);
     }
   }, [data]);
 
-  // useEffect(() => {
-  //   // 토큰을 로컬 스토리지나 쿠키에서 가져오기
-  //   const token = localStorage.getItem('token');
+  useEffect(() => {
+    // 토큰을 로컬 스토리지나 쿠키에서 가져오기
+    const token = localStorage.getItem('token');
 
-  //   // 토큰을 사용하여 필요한 인증/권한 확인
-  //   if (token) {
-  //     // 토큰이 있는 경우, 인증 처리 진행
-  //     // 필요한 API 호출 등을 수행하여 사용자 정보를 가져올 수 있음
-  //     console.log('토큰 사용 가능');
-  //   } else {
-  //     // 토큰이 없는 경우, 로그인 페이지로 이동 등의 처리
-  //     console.log('토큰 없음, 로그인 필요');
-  //     window.location.href = '/login';
-  //   }
-  // }, []);
+    // 토큰을 사용하여 필요한 인증/권한 확인
+    if (token) {
+      // 토큰이 있는 경우, 인증 처리 진행
+      // 필요한 API 호출 등을 수행하여 사용자 정보를 가져올 수 있음
+      console.log('토큰 사용 가능');
+    } else {
+      // 토큰이 없는 경우, 로그인 페이지로 이동 등의 처리
+      console.log('토큰 없음, 로그인 필요');
+      window.location.href = '/login';
+    }
+  }, []);
 
   const onChange = (key: string, e: React.ChangeEvent<HTMLInputElement>) => {
     setEditData({ ...editData, [key]: e.target.value });
