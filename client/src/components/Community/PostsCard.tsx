@@ -32,7 +32,9 @@ function PostsCard({ post }: { post: PostCommunityInterface }) {
           {post.category}
         </CategoryBox>
       </TopContainer>
-      <Title>{post.title}</Title>
+      <TitleContainer>
+        <Title>{post.title}</Title>
+      </TitleContainer>
       <Content>{post.body}</Content>
       <BottomContainer>
         <ButtonsContainer>
@@ -71,6 +73,23 @@ const PostsCardContainer = styled(Link)`
 const Title = styled.div`
   font-weight: bold;
   font-size: 16px;
+  position: relative;
+  z-index: 1;
+  &::before {
+    display: block;
+    background-color: rgba(152, 221, 227, 1);
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 9px;
+    z-index: -1;
+  }
+`;
+
+const TitleContainer = styled.div`
+  position: relative;
+  width: fit-content;
 `;
 
 const TopContainer = styled.div`
