@@ -4,6 +4,8 @@ files:
   - source: /
     destination: /home/ubuntu/action
     overwrite: yes
+    exclude: # 제외할 파일/디렉터리 목록을 설정
+      - client
 
 permissions:
   - object: /home/ubuntu/action
@@ -16,3 +18,21 @@ hooks:
     - location: server/scripts/deploy.sh
       timeout: 60
       runas: ubuntu
+# version: 0.0
+# os: linux
+# files:
+#   - source: /
+#     destination: /home/ubuntu/action
+#     overwrite: yes
+
+# permissions:
+#   - object: /home/ubuntu/action
+#     pattern: "**"
+#     owner: ubuntu
+#     group: ubuntu
+
+# hooks:
+#   ApplicationStart:
+#     - location: server/scripts/deploy.sh
+#       timeout: 60
+#       runas: ubuntu
