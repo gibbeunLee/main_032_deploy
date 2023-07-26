@@ -20,6 +20,10 @@ type CommunityPost = {
     email: string;
   };
   like: number;
+  writer: {
+    memberId: number;
+    nickname: string;
+  };
   comments: Array<{
     commentId: string;
     commentBody: string;
@@ -97,7 +101,9 @@ function CommunityDetail() {
       //   ],
       // };
       // 서버에서 데이터 가져오는 요청
-      const response = await axios.get(`${apiUrl}/community/detail/${communityId}`);
+      const response = await axios.get(
+        `${apiUrl}/community/detail/${communityId}`,
+      );
       const communityPost: CommunityPost = response.data;
       setPost(communityPost);
       setLike(communityPost.like);
@@ -138,9 +144,12 @@ function CommunityDetail() {
 
     try {
       // 서버로 댓글 데이터를 전송하는 요청
-      const response = await axios.post(`${apiUrl}/community/${communityId}/comments`, {
-        commentBody: userCommentBody, // 새로운 상태 변수 사용
-      });
+      const response = await axios.post(
+        `${apiUrl}/community/${communityId}/comments`,
+        {
+          commentBody: userCommentBody, // 새로운 상태 변수 사용
+        },
+      );
 
       // 요청이 성공하면 게시물 데이터를 다시 가져오고, 댓글 입력 필드를 초기화
       if (response.status === 200) {
@@ -277,7 +286,8 @@ function CommunityDetail() {
   }
 
   // 현재 사용자가 게시물 작성자인지 확인
-  const isAuthor = userInfo && post.writer.memberId === userInfo.memberId;
+  const isAuthor =
+    userInfo && post && post.writer.memberId === userInfo.memberId;
 
   return (
     <DetailSection>
