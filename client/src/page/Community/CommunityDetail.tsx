@@ -11,14 +11,15 @@ const apiUrl = import.meta.env.VITE_REACT_APP_SERVER;
 type CommunityPost = {
   communityId: number;
   title: string;
-  content: string;
-  like: number;
-  createdAt: string;
+  body: string;
   category: string;
-  writer: {
+  createdAt: string;
+  userInfo: {
     memberId: number;
     nickname: string;
+    email: string;
   };
+  like: number;
   comments: Array<{
     commentId: string;
     commentBody: string;
@@ -96,7 +97,7 @@ function CommunityDetail() {
       //   ],
       // };
       // 서버에서 데이터 가져오는 요청
-      const response = await axios.get(`${apiUrl}/community/${communityId}`);
+      const response = await axios.get(`${apiUrl}/community/detail/${communityId}`);
       const communityPost: CommunityPost = response.data;
       setPost(communityPost);
       setLike(communityPost.like);
@@ -137,7 +138,7 @@ function CommunityDetail() {
 
     try {
       // 서버로 댓글 데이터를 전송하는 요청
-      const response = await axios.post(`/community/${communityId}/comments`, {
+      const response = await axios.post(`${apiUrl}/community/${communityId}/comments`, {
         commentBody: userCommentBody, // 새로운 상태 변수 사용
       });
 
@@ -153,7 +154,7 @@ function CommunityDetail() {
 
   // 수정 버튼 클릭 처리 함수
   function handleEditButtonClick() {
-    navigate(`${apiUrl}/community/${communityId}/edit`, { state: { post } });
+    navigate(`${apiUrl}/community/edit/${communityId}`, { state: { post } });
   }
 
   // 게시물 좋아요 클릭 처리 함수
@@ -170,7 +171,7 @@ function CommunityDetail() {
       setLike(prevLike => prevLike + 1);
       try {
         // 좋아요 등록 요청
-        await axios.post(`/community/like/${communityId}`);
+        await axios.post(`${apiUrl}/community/like/${communityId}`);
       } catch (error) {
         console.error(error);
       }
@@ -307,7 +308,7 @@ function CommunityDetail() {
               <LikeText>{like}</LikeText>
             </RowSection>
             {/* 게시물 내용 */}
-            <ContentText>{post.content}</ContentText>
+            <ContentText>{post.body}</ContentText>
           </MiddleSection>
           <RowSection>
             <ContentText>댓글</ContentText>
