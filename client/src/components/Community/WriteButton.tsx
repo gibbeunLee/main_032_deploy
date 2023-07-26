@@ -3,7 +3,7 @@ import { PiPencilSimple } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
 
 function WriteButton() {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('isLogin');
   const navigate = useNavigate();
 
   const onClick = async () => {
@@ -13,7 +13,7 @@ function WriteButton() {
     }
     navigate(token ? '/community/post' : '/login');
   };
-  
+
   return (
     <WriteButtonBtn onClick={onClick}>
       <PiPencilSimple size="22px" />

@@ -8,7 +8,7 @@ import likeIcon from '../../assets/likeIcon.png';
 export interface PostCommunityInterface {
   communityId: number;
   userInfo: {
-    nickname: string;
+    nickName: string;
   };
   title: string;
   body: string;
@@ -24,7 +24,7 @@ function PostsCard({ post }: { post: PostCommunityInterface }) {
   return (
     <PostsCardContainer to={`/community/${post.communityId}`}>
       <TopContainer>
-        <Nickname>{post.userInfo.nickname}</Nickname>
+        <Nickname>{post.userInfo.nickName}</Nickname>
         <CategoryBox>
           <CategoryBadge
             style={{ backgroundColor: getCategoryColor(post.category) }}

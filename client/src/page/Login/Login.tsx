@@ -10,7 +10,6 @@ import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_REACT_APP_SERVER;
 
-
 // 로그인 요청과 응답을 위한 타입 정의
 type LoginRequest = {
   email: string;
@@ -65,8 +64,12 @@ function Login() {
   // 로그인 요청을 보내는 함수
   async function login(loginRequest: LoginRequest): Promise<LoginResponse> {
     const response = await axios.post(`${apiUrl}/user/login`, loginRequest);
-    const { token, memberId, nickname } = response.data;
-    saveUserInfo(memberId, nickname); // 사용자 정보 저장
+    const {
+      token,
+      data: { userId },
+      nickname,
+    } = response.data;
+    saveUserInfo(userId, nickname); // 사용자 정보 저장
     saveToken(token); // 토큰 저장
     navigate('/');
     return response.data;
@@ -102,9 +105,9 @@ function Login() {
   }
 
   // 사용자 정보를 로컬 스토리지에 저장하는 함수
-  function saveUserInfo(memberId: number, nickname: string): void {
+  function saveUserInfo(userId: number, nickname: string): void {
     const userInfo = {
-      memberId,
+      userId,
       nickname,
     };
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
@@ -113,6 +116,7 @@ function Login() {
   // 토큰을 로컬 스토리지에 저장하는 함수
   function saveToken(token: string): void {
     localStorage.setItem('token', token);
+    localStorage.setItem('isLogin', 'true');
   }
 
   // OAuth 로그인 핸들러
