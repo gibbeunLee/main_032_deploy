@@ -128,6 +128,7 @@ const CommunityContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   margin-top: 67px;
   padding: 16px;
   overflow: auto;

@@ -41,6 +41,7 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState(''); // 이메일 상태
   const [password, setPassword] = useState(''); // 비밀번호 상태
+
   // 로그인 요청을 위한 useMutation 훅
   const loginMutation: UseMutationResult<LoginResponse, unknown, LoginRequest> =
     useMutation(login);
@@ -65,12 +66,11 @@ function Login() {
   async function login(loginRequest: LoginRequest): Promise<LoginResponse> {
     const response = await axios.post(`${apiUrl}/user/login`, loginRequest);
     const {
-      token,
       data: { userId },
       nickname,
     } = response.data;
     saveUserInfo(userId, nickname); // 사용자 정보 저장
-    saveToken(token); // 토큰 저장
+    saveToken(response.headers.authorization);
     navigate('/');
     return response.data;
   }

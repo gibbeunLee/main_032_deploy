@@ -31,9 +31,13 @@ export const getCommunityList = async (query: {
 // my page
 export const deleteUser = async (userId?: number) => {
 try {
+  const token = localStorage.getItem('token')
   // TODO: axios.delete가 맞는지 BE랑 확인 필요
   const response = await axios.delete(
-    `/user/delete/${userId || 1}`
+    `/user/delete/${userId || 1}`,
+    {
+      headers: {Authorization: token}
+    }
   );
 
   return response.data;
@@ -44,8 +48,12 @@ try {
 
 export const getUserInfo = async (userId?: number) => {
 try {
+  const token = localStorage.getItem('token')
   const response = await axios.get(
-    `/user/${userId || 1}`
+    `/user/${userId || 1}`,
+    {
+      headers: {Authorization: token}
+    }
   );
 
   return response.data;
@@ -61,9 +69,13 @@ export const patchUserInfo = async (userId: number, body: {
   email: string
 }) => {
 try {
+  const token = localStorage.getItem('token')
   const response = await axios.patch(
     `/user/edit/${userId || 1}`,
-    body
+    body,
+    {
+      headers: {Authorization: token}
+    }
   );
 
   return response.data;
