@@ -50,10 +50,12 @@
 | `chore` | 빌드 업무 수정, 패키지 매니저 수정 |
 
 ## 6. 와이어프레임
-🔖 [피그마 URL](https://www.figma.com/file/bwgcEsrO65wXjtPKxZ9ALZ/%ED%99%94%EB%A9%B4%EC%A0%95%EC%9D%98%EC%84%9C?type=design&node-id=0%3A1&mode=design&t=92XJgmYOl4wtGkVO-1)
+🔖 [피그마 URL](https://www.figma.com/file/HkT64FIkkNVRUwN2uBXt1R/FE-%ED%99%94%EB%A9%B4-%EC%A0%95%EC%9D%98%EC%84%9C?type=design&mode=design)
 ![스크린샷 2023-06-27 오전 11 19 29](https://github.com/codestates-seb/seb44_pre_004/assets/101058141/1e9c8697-1b5b-4325-8f98-5f20e6c94163)
 
 ## 7. API명세서
+🔖 
+
 
 
 ## 8. ERD
