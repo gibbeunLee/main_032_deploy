@@ -54,10 +54,9 @@
 ![스크린샷 2023-06-27 오전 11 19 29](https://github.com/codestates-seb/seb44_pre_004/assets/101058141/1e9c8697-1b5b-4325-8f98-5f20e6c94163)
 
 ## 7. API명세서
-🔖 
-
-
+🔖 [API URL] ()
 
 ## 8. ERD
+🔖 [ERD URL] (https://drive.google.com/file/d/11wOntq_bNFeJouRtsMrH6ML6IHpmp42V/view)
 
 
