@@ -11,7 +11,7 @@
 | 이기쁨<br>(BE Leader) | 공석화<br>(BE) | 송영범<br>(BE) |
 |:--------:| :--------: | :--------: |
 | <img src="" alt="이기쁨" width="120" height="120">| <img src="" alt="공석화" width="155" height="155"> | <img src="" alt="송영범" width="130" height="130"> 
-|[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@BAEKDODAM](https://github.com/BAEKDODAM) | 
+|[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@BAEKDODAM](https://github.com/withme1221) | 
 | <p align="left">- answer CRUD  <br/>- Like <br/>- <br/>- <br/> | <p align="left">- JWT 자격 증명 <br/>- 회원 가임 <br/>- <br/>- <br/> | <p align="left">- 회원 정보 조회 <br/>- 회원 정보 수정 <br/>- 로그인(JWT) <br/> | <p align="left">- <br/>- <br/>- <br/>- <br/> | 
 
 
