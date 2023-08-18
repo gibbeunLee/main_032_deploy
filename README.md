@@ -12,7 +12,7 @@
 |:--------:| :--------: | :--------: |
 | <img src="" alt="이기쁨" width="120" height="120">| <img src="" alt="공석화" width="155" height="155"> | <img src="" alt="송영범" width="130" height="130"> 
 |[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@BAEKDODAM](https://github.com/withme1221) | 
-| <p align="left">- answer CRUD  <br/>- Like <br/>- <br/>- <br/> | <p align="left">- JWT 자격 증명 <br/>- 회원 가임 <br/>- <br/>- <br/> | <p align="left">- 회원 정보 조회 <br/>- 회원 정보 수정 <br/>- 로그인(JWT) <br/> | <p align="left">- <br/>- <br/>- <br/>- <br/> | 
+| <p align="left">- JWT 자격 증명 <br/>- 회원 가임 <br/>- comment CUD <br/>- 자동배포화 <br/>- readme<br/> | <p align="left">- Community CRUD <br/>- Like - comment, community <br/>- S3 image upload<br/>- Pageinfo, Category <br/> | <p align="left">- OAuth google <br/>- Plan CRUD <br/>- BookMark <br/>|
 
 
 ### Front-end
@@ -20,7 +20,7 @@
 | :--------: | :--------: | :--------: |
 | <img src="" alt="이지윤" width="130" height="130"> | <img src="" alt="신혜인" width="130" height="130"> | <img src="" alt="이예리" width="160" height="160"> |
 | [@wldbseja](https://github.com/wldbseja) | [@hyein0608](https://github.com/hyein0608) | [@Yeeri](https://github.com/Yeeri) |
-| <p align="left">- 공통 컴포넌트 <br/>- 메인 (로그인 전, 후) <br/>- 마이페이지 사용자 정보 <br/>- 회원정보 수정/ 이미지 업로드 <br/>- 로그아웃 <br/>- Axios.interceptors <br/>|<p align="left">- 질문 리스트 페이지 <br/>- 질문 작성 페이지 <br/>- 질문 상세 페이지 <br/>- 질문 CRUD <br/>- 답변 CRUD <br/>- 댓글 CRUD <br/>- 질문, 답변 좋아요 기능 |<p align="left">- 회원가입 <br/>- 로그인 <br/>- <br/>- <br/>|
+| <p align="left">- LandingPage <br/>- LoginPage <br/>- SignUpPage <br/>- CommunityDetail <br/>- CommunityPostForm <br/>- Footer <br/>|<p align="left">- <br/>- Header <br/>- Community <br/>- My Page <br/>|<p align="left">- Plan <br/>- Plan Detail <br/>- Plan Post<br/>|
 
 
 ## 3. 사용기술스택
