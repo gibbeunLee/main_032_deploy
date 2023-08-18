@@ -18,7 +18,7 @@
 ### Front-end
 | 이지윤<br>(FE Leader) | 신혜인<br>(FE) | 이예리<br>(FE) |
 | :--------: | :--------: | :--------: |
-| <img src="" alt="이지윤" width="130" height="130"> | <img src="" alt="신혜인" width="130" height="130"> | <img src="" alt="이예리" width="160" height="160"> |
+| <img src="https://file.notion.so/f/s/b21eaad3-5995-46f2-aa99-1f9d46a1b341/peeps-avatar-alpha.png?id=a790ae95-7330-44f4-a34a-78c584eb8d07&table=block&spaceId=82d63a72-8254-4cde-bf1e-b2597b7c099c&expirationTimestamp=1692489600000&signature=PcvLqenv2jbQ0-8lNgBq2YdmPaIChRXqKQ3Hp9rTIMg&downloadName=peeps-avatar-alpha.png" alt="이지윤" width="130" height="130"> | <img src="" alt="신혜인" width="130" height="130"> | <img src="" alt="이예리" width="160" height="160"> |
 | [@wldbseja](https://github.com/wldbseja) | [@hyein0608](https://github.com/hyein0608) | [@Yeeri](https://github.com/Yeeri) |
 | <p align="left">- LandingPage <br/>- LoginPage <br/>- SignUpPage <br/>- CommunityDetail <br/>- CommunityPostForm <br/>- Footer <br/>|<p align="left">- Header <br/>- Community <br/>- My Page <br/>|<p align="left">- Plan <br/>- Plan Detail <br/>- Plan Post<br/>|
 
