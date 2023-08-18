@@ -10,15 +10,15 @@
 ### Back-end
 | 이기쁨<br>(BE Leader) | 공석화<br>(BE) | 송영범<br>(BE) |
 |:--------:| :--------: | :--------: |
-| <img src="" alt="이기쁨" width="120" height="120">| <img src="" alt="공석화" width="155" height="155"> | <img src="" alt="송영범" width="130" height="130"> 
-|[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@BAEKDODAM](https://github.com/withme1221) | 
+| <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fcs8AbW%2FbtsrEoMTmGo%2F755Q9ikWvFCKABlJaocztk%2Fimg.jpg" alt="이기쁨" width="120" height="120">| <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbUkSiO%2FbtsrwAofIb4%2FptdTgGfhhoWj6UV1JizL4K%2Fimg.jpg" alt="공석화" width="155" height="155"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FzThqk%2FbtsrB7k32fI%2FWKmYs08azZseQItfkWJqSK%2Fimg.jpg" alt="송영범" width="130" height="130"> 
+|[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@withme1221](https://github.com/withme1221) | 
 | <p align="left">- JWT 자격 증명 <br/>- 회원 가임 <br/>- comment CUD <br/>- 자동배포화 <br/>- readme<br/> | <p align="left">- Community CRUD <br/>- Like - comment, community <br/>- S3 image upload <br/>- Pageinfo <br/>- Category <br/> | <p align="left">- OAuth google <br/>- Plan CRUD <br/>- BookMark <br/>|
 
 
 ### Front-end
 | 이지윤<br>(FE Leader) | 신혜인<br>(FE) | 이예리<br>(FE) |
 | :--------: | :--------: | :--------: |
-| <img src="https://file.notion.so/f/s/b21eaad3-5995-46f2-aa99-1f9d46a1b341/peeps-avatar-alpha.png?id=a790ae95-7330-44f4-a34a-78c584eb8d07&table=block&spaceId=82d63a72-8254-4cde-bf1e-b2597b7c099c&expirationTimestamp=1692489600000&signature=PcvLqenv2jbQ0-8lNgBq2YdmPaIChRXqKQ3Hp9rTIMg&downloadName=peeps-avatar-alpha.png" alt="이지윤" width="130" height="130"> | <img src="" alt="신혜인" width="130" height="130"> | <img src="" alt="이예리" width="160" height="160"> |
+| <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUojgB%2FbtsrCybEXAH%2Fz46qKbChtfaGtfkaoSwcWk%2Fimg.png" alt="이지윤" width="130" height="130"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUUSf0%2FbtsrDFuCwSC%2FkhkfhnKrgXlwRwgyWVCZrk%2Fimg.jpg" alt="신혜인" width="130" height="130"> | <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fnmmc2%2FbtsrB42WHsA%2F5P0lYaaP6BwBjFZAl9kkLK%2Fimg.png" alt="이예리" width="160" height="160"> |
 | [@wldbseja](https://github.com/wldbseja) | [@hyein0608](https://github.com/hyein0608) | [@Yeeri](https://github.com/Yeeri) |
 | <p align="left">- LandingPage <br/>- LoginPage <br/>- SignUpPage <br/>- CommunityDetail <br/>- CommunityPostForm <br/>- Footer <br/>|<p align="left">- Header <br/>- Community <br/>- My Page <br/>|<p align="left">- Plan <br/>- Plan Detail <br/>- Plan Post<br/>|
 
