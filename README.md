@@ -12,7 +12,7 @@
 |:--------:| :--------: | :--------: |
 | <img src="https://github.com/codestates-seb/seb44_main_032/assets/124775054/cdcf4289-b6c6-4dfe-a722-76fa1059780d" alt="이기쁨" width="120" height="120">| <img src="https://github.com/codestates-seb/seb44_main_032/assets/124775054/dec9b40f-39cf-4d7d-9860-595335529b77" alt="공석화" width="130" height="130"> | <img src="https://github.com/codestates-seb/seb44_main_032/assets/124775054/b5d27474-209a-4322-af64-71a8609151ef" alt="송영범" width="130" height="130"> 
 |[@gibbeunLee](https://github.com/gibbeunLee) | [@tjrghk4485](https://github.com/tjrghk4485) | [@withme1221](https://github.com/withme1221) | 
-| <p align="left">- JWT 자격 증명 <br/>- 회원 가임 <br/>- comment CUD <br/>- 자동배포화 <br/>- readme<br/> | <p align="left">- Community CRUD <br/>- Like - comment, community <br/>- S3 image upload <br/>- Pageinfo <br/>- Category <br/> | <p align="left">- OAuth google <br/>- Plan CRUD <br/>- BookMark <br/>|
+| <p align="left">- JWT 자격 증명 <br/>- 회원 가입 <br/>- 로그인 <br/>- comment CUD <br/>- 자동배포화 <br/>- readme<br/> | <p align="left">- Community CRUD <br/>- Like - comment, community <br/>- S3 image upload <br/>- Pageinfo <br/>- Category <br/> | <p align="left">- OAuth google <br/>- Plan CRUD <br/>- BookMark <br/>|
 
 
 ### Front-end
