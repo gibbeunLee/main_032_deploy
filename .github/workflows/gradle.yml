@@ -5,25 +5,24 @@
 # # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
 # # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 
-# name: CI/CD
+name: CI/CD
 
-# on:
-#   push:
-#     branches: [ "dev" ]
-#   pull_request:
-#     branches: [ "dev" ]
-    
-# env:
-#   S3_BUCKET_NAME: code-assembly
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
 
-# permissions:
-#   contents: read
+env:
+  S3_BUCKET_NAME: code-assembly
 
-# jobs:
+permissions:
+  contents: read
+
+jobs:
 #   server_build:
 
 #     runs-on: ubuntu-latest
-
 #     steps:
 #     - uses: actions/checkout@v3
 #     - name: Set up JDK 11
@@ -44,7 +43,6 @@
 #     - name: Make zip file
 #       run: zip -r ./code-assembly-deploy.zip .
 #       shell: bash
-
 #     # Access Key와 Secret Access Key를 통해 권한을 확인합니다.
 #     # 아래 코드에 Access Key와 Secret Key를 직접 작성하지 않습니다.
 #     - name: Configure AWS credentials
@@ -57,7 +55,6 @@
 #     # 압축한 프로젝트를 S3로 전송합니다.
 #     - name: Upload to S3
 #       run: aws s3 cp --region ap-northeast-2 ./code-assembly-deploy.zip s3://$S3_BUCKET_NAME/code-assembly-deploy.zip
-
 #     # CodeDeploy에게 배포 명령을 내립니다.
 #     - name: Code Deploy
 #       run: >
@@ -66,34 +63,34 @@
 #         --deployment-group-name code-assembly-group
 #         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=code-assembly-deploy.zip
 
-#   client_build:
+  client_build:
 
-# #     needs: server_build
+#     needs: server_build
 
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-#     steps:
-#     - uses: actions/checkout@v3
+    steps:
+    - uses: actions/checkout@v3
 
-#     - name: Use Node.js
-#       uses: actions/setup-node@v3
-#       with:
-#         node-version: '18.14.2'
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.14.2'
 
-#     - name: Install dependencies
-#       working-directory: ./client
-#       run: npm ci
+    - name: Install dependencies
+      working-directory: ./client
+      run: npm ci
 
-#     - name: Build Client with npm
-#       working-directory: ./client
-#       run: npm run build
-      
-#     - name: Configure AWS credentials
-#       uses: aws-actions/configure-aws-credentials@v2
-#       with:
-#         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }} # 등록한 GitHub Secret이 자동으로 불려옵니다.
-#         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # 등록한 GitHub Secret이 자동으로 불려옵니다.
-#         aws-region: ap-northeast-2
+    - name: Build Client with npm
+      working-directory: ./client
+      run: npm run build
 
-#     - name: Upload to S3
-#       run: aws s3 cp --region ap-northeast-2 ./client/dist/ s3://$S3_BUCKET_NAME/ --recursive
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }} # 등록한 GitHub Secret이 자동으로 불려옵니다.
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # 등록한 GitHub Secret이 자동으로 불려옵니다.
+        aws-region: ap-northeast-2
+
+    - name: Upload to S3
+      run: aws s3 cp --region ap-northeast-2 ./client/dist/ s3://$S3_BUCKET_NAME/ --recursive
