@@ -43,7 +43,7 @@ function MyPage() {
     () => deleteUser(parsed.userId),
     {
       onSuccess: () => {
-        alert('탈퇴되었습니다.');
+        alert('현재는 탈퇴가 불가능 합니다.');
         try {
           localStorage.removeItem('token');
         } catch (e) {
